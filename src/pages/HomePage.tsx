@@ -1,6 +1,7 @@
 import { Footer } from '../components/layout/Footer';
 import { Navbar } from '../components/layout/Navbar';
 import { FAQ } from '../components/sections/FAQ';
+import { ContactSection } from '../components/sections/ContactSection';
 import { Hero } from '../components/sections/Hero';
 import { HowItWorks } from '../components/sections/HowItWorks';
 import { Reviews } from '../components/sections/Reviews';
@@ -18,6 +19,7 @@ export function HomePage() {
         <HowItWorks />
         <Reviews />
         <FAQ />
+        <ContactSection />
       </main>
       <Footer />
     </div>

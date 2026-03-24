@@ -1,12 +1,12 @@
 export const siteConfig = {
   businessName: 'TrueTech Repair',
-  phoneNumber: '(949) 381-1572',
-  smsNumber: '(949) 381-1572',
+  phoneNumber: '(949) 381-1579',
+  smsNumber: '(949) 381-1579',
   address: '122 Yellow Pine, Irvine, CA',
   serviceAreaLabel: 'Irvine & OC',
   serviceAreaDescription: 'Irvine and Orange County',
-  phoneHref: 'tel:+19493811572',
-  smsHref: 'sms:+19493811572',
+  phoneHref: 'tel:+19493811579',
+  smsHref: 'sms:+19493811579',
   ctaLabels: {
     callNow: 'Call Now',
     textForQuote: 'Text for Quote',
@@ -14,3 +14,4 @@ export const siteConfig = {
     bookRepair: 'Book Repair',
   },
 } as const;
+
