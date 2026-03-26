@@ -4,7 +4,11 @@ import { siteConfig } from '../../config/site';
 
 export function Footer() {
   const location = useLocation();
-  const hideTopCta = location.pathname === '/iphone-screen-repair-irvine';
+  const hideTopCta = [
+    '/iphone-screen-repair-irvine',
+    '/iphone-battery-replacement-irvine',
+    '/ipad-repair-irvine',
+  ].includes(location.pathname);
 
   return (
     <>
