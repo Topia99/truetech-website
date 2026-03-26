@@ -1,5 +1,6 @@
 export const siteConfig = {
   businessName: 'TrueTech Repair',
+  siteUrl: 'https://yourdomain.com',
   phoneNumber: '(949) 381-1579',
   smsNumber: '(949) 381-1579',
   address: '122 Yellow Pine, Irvine, CA',
@@ -14,4 +15,3 @@ export const siteConfig = {
     bookRepair: 'Book Repair',
   },
 } as const;
-

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cracked screen before repair placeholder</title>
+  <desc id="desc">A stylized phone illustration with visible screen cracks.</desc>
+  <rect width="1200" height="900" fill="#e2e8f0"/>
+  <rect x="240" y="90" width="720" height="720" rx="72" fill="#0f172a"/>
+  <rect x="290" y="140" width="620" height="620" rx="48" fill="#111827"/>
+  <path d="M510 180 460 300l90 40-110 120 140 40-95 150" fill="none" stroke="#f8fafc" stroke-width="10" stroke-linecap="round"/>
+  <path d="M660 240 610 320l120 85-95 70 65 90-95 110" fill="none" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+  <path d="M395 520 520 460m160 145 90-75m-325 90 75-65" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <rect x="535" y="790" width="130" height="10" rx="5" fill="#475569"/>
+</svg>

@@ -6,7 +6,7 @@ export function Reviews() {
     <section id="reviews" className="bg-blue-50 py-20">
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="mb-12 text-3xl font-bold text-gray-900 md:text-4xl">
-          Trusted by Customers in Irvine
+          Local Customers Want Fast, Clear Repair Help
         </h2>
 
         <div className="mx-auto max-w-3xl rounded-3xl bg-white p-10 shadow-xl shadow-blue-900/5">
@@ -15,6 +15,11 @@ export function Reviews() {
               <Star key={idx} className="h-8 w-8 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
+
+          <p className="mx-auto mb-6 max-w-2xl text-lg text-gray-600">
+            Social proof matters most when customers are deciding how quickly they can trust a
+            local repair business with an important device.
+          </p>
 
           <blockquote className="mb-8 text-xl leading-relaxed font-medium text-gray-700 italic md:text-2xl">
             "{review.quote}"

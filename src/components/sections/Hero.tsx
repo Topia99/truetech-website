@@ -1,4 +1,5 @@
 import { Calendar, CheckCircle, MessageSquare, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
 import { trustPoints } from '../../data/siteData';
 
@@ -10,15 +11,12 @@ export function Hero() {
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
             Same-Day Phone Repair <br className="hidden sm:block" />
-            <span className="text-blue-400">in Irvine</span>
+            <span className="text-blue-400">in Irvine &amp; Orange County</span>
           </h1>
 
           <p className="mb-4 text-lg font-light text-blue-100 sm:text-xl">
-            Fast and reliable iPhone screen repair, battery replacement, and charging port fixes.
-          </p>
-
-          <p className="mb-10 text-base text-gray-300 sm:text-lg">
-            Serving Irvine and Orange County with same-day service and warranty.
+            TrueTech Repair helps with common phone and tablet issues, including cracked screens,
+            battery problems, and convenient mobile repair service.
           </p>
 
           <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -38,13 +36,13 @@ export function Hero() {
               {siteConfig.ctaLabels.textForQuote}
             </a>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-lg font-bold text-white transition-all hover:bg-white/10 sm:w-auto"
             >
               <Calendar className="h-5 w-5" />
-              {siteConfig.ctaLabels.bookRepair}
-            </a>
+              Request a Quote
+            </Link>
           </div>
 
           <div className="flex flex-col items-center justify-center gap-6 text-sm font-medium text-blue-200 sm:flex-row sm:gap-8 sm:text-base">

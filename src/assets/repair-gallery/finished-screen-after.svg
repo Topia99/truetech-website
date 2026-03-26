@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Finished screen after repair placeholder</title>
+  <desc id="desc">A stylized clean phone screen with a success check.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="#dbeafe"/>
+  <rect x="255" y="90" width="690" height="720" rx="72" fill="#0f172a"/>
+  <rect x="305" y="140" width="590" height="620" rx="48" fill="url(#bg)"/>
+  <circle cx="600" cy="450" r="130" fill="#eff6ff" opacity=".95"/>
+  <path d="m540 450 45 45 90-105" fill="none" stroke="#16a34a" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="420" y="610" width="360" height="22" rx="11" fill="#bfdbfe" opacity=".9"/>
+  <rect x="515" y="790" width="170" height="10" rx="5" fill="#475569"/>
+</svg>

@@ -1,4 +1,5 @@
 import { MessageSquareText, PhoneCall, ShieldCheck } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { siteConfig } from '../../config/site';
@@ -103,12 +104,12 @@ export function ContactSection() {
           <div className="rounded-3xl bg-slate-900 p-8 text-white shadow-xl shadow-slate-900/10 sm:p-10">
             <div className="mb-8 max-w-xl">
               <p className="mb-3 text-sm font-semibold tracking-[0.24em] text-blue-300 uppercase">
-                Fast Response
+                Ready to Start?
               </p>
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">Get a Free Quote</h2>
               <p className="text-lg leading-relaxed text-slate-300">
-                Tell us your name, phone number, and what&apos;s wrong with your device. We&apos;ll
-                get back to you quickly.
+                Tell us what is happening with your device and how to reach you. We&apos;ll help
+                you figure out the best next step as quickly as possible.
               </p>
             </div>
 
@@ -131,8 +132,10 @@ export function ContactSection() {
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
                 <ShieldCheck className="mb-3 h-6 w-6 text-blue-300" />
-                <p className="mb-1 text-sm font-semibold text-white">Local Service</p>
-                <p className="text-sm text-slate-300">{siteConfig.serviceAreaDescription}</p>
+                <p className="mb-1 text-sm font-semibold text-white">Need More Info?</p>
+                <Link to="/faq" className="text-sm text-slate-300 hover:text-white">
+                  Review common repair questions
+                </Link>
               </div>
             </div>
           </div>

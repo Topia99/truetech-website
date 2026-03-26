@@ -1,5 +1,6 @@
 import { Menu, Phone, Smartphone, X } from 'lucide-react';
 import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
 import { navLinks } from '../../data/siteData';
 
@@ -10,24 +11,28 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-white/95 shadow-sm backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="rounded-lg bg-blue-600 p-2">
               <Smartphone className="h-6 w-6 text-white" />
             </div>
             <span className="text-2xl font-bold tracking-tight text-gray-900">
               {siteConfig.businessName}
             </span>
-          </div>
+          </Link>
 
-          <div className="hidden items-center space-x-8 md:flex">
+          <div className="hidden items-center space-x-6 md:flex">
             {navLinks.map((link) => (
-              <a
+              <NavLink
                 key={link.href}
-                href={link.href}
-                className="font-medium text-gray-600 transition-colors hover:text-blue-600"
+                to={link.href}
+                className={({ isActive }) =>
+                  `font-medium transition-colors hover:text-blue-600 ${
+                    isActive ? 'text-blue-600' : 'text-gray-600'
+                  }`
+                }
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
             <a
               href={siteConfig.phoneHref}
@@ -54,14 +59,18 @@ export function Navbar() {
       {isMobileMenuOpen && (
         <div className="space-y-1 border-t border-gray-100 bg-white px-4 pt-2 pb-4 shadow-lg md:hidden">
           {navLinks.map((link) => (
-            <a
+            <NavLink
               key={link.href}
-              href={link.href}
+              to={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block rounded-md px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+              className={({ isActive }) =>
+                `block rounded-md px-3 py-3 text-base font-medium hover:bg-gray-50 hover:text-blue-600 ${
+                  isActive ? 'text-blue-600' : 'text-gray-700'
+                }`
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
           <a
             href={siteConfig.phoneHref}

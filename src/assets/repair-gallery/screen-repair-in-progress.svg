@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Screen repair in progress placeholder</title>
+  <desc id="desc">A stylized phone with a repair tool and separated screen.</desc>
+  <rect width="1200" height="900" fill="#e0f2fe"/>
+  <rect x="280" y="220" width="640" height="520" rx="56" fill="#0f172a"/>
+  <rect x="330" y="270" width="540" height="420" rx="36" fill="#111827"/>
+  <rect x="410" y="70" width="380" height="200" rx="28" fill="#f8fafc" opacity=".92"/>
+  <rect x="450" y="110" width="300" height="120" rx="18" fill="#cbd5e1"/>
+  <path d="M880 150 980 60l90 90-100 100" fill="#2563eb"/>
+  <path d="M915 185 835 265" stroke="#1d4ed8" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="890" cy="210" r="24" fill="#93c5fd"/>
+  <path d="M470 510 730 350" stroke="#f8fafc" stroke-width="8" stroke-dasharray="18 18"/>
+  <rect x="540" y="712" width="120" height="10" rx="5" fill="#475569"/>
+</svg>

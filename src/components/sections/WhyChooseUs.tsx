@@ -1,4 +1,13 @@
-import { Award, CheckCircle, Clock, MapPin, ShieldCheck, Smartphone } from 'lucide-react';
+import {
+  ArrowRight,
+  Award,
+  CheckCircle,
+  Clock,
+  MapPin,
+  ShieldCheck,
+  Smartphone,
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config/site';
 import { cities, whyChooseUs } from '../../data/siteData';
 
@@ -15,10 +24,12 @@ export function WhyChooseUs() {
                 Why Choose {siteConfig.businessName}
               </h2>
               <p className="mb-4 text-lg text-gray-600">
-                We provide fast, affordable, and reliable phone repair services in Irvine.
+                We keep the process simple for local customers who need a quick answer and a clear
+                repair plan.
               </p>
               <p className="mb-10 text-lg text-gray-600">
-                Our goal is to get your device back to perfect condition as quickly as possible.
+                Whether you are dealing with a cracked screen, weak battery, or a device that is
+                no longer reliable, our homepage points you to the right service page or quote path.
               </p>
 
               <div className="space-y-8">
@@ -50,8 +61,8 @@ export function WhyChooseUs() {
                       <CheckCircle className="h-8 w-8 text-green-600" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-500">Repair Status</p>
-                      <p className="text-lg font-bold text-gray-900">100% Guaranteed</p>
+                      <p className="text-sm font-medium text-gray-500">Local Repair Focus</p>
+                      <p className="text-lg font-bold text-gray-900">Fast answers, clear next steps</p>
                     </div>
                   </div>
                 </div>
@@ -64,10 +75,12 @@ export function WhyChooseUs() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="mb-6 text-3xl font-bold text-gray-900 md:text-4xl">
-            Serving Irvine and Nearby Areas
+            Local Service Across Irvine and Orange County
           </h2>
           <p className="mx-auto mb-12 max-w-2xl text-lg text-gray-600">
-            We provide phone repair services across Irvine and Orange County, including:
+            TrueTech Repair is based around Irvine and helps customers throughout Orange County who
+            want a dependable local option instead of mailing a device away or waiting on a slow
+            repair process.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -80,6 +93,16 @@ export function WhyChooseUs() {
                 {city}
               </div>
             ))}
+          </div>
+
+          <div className="mt-10">
+            <Link
+              to="/phone-repair-orange-county"
+              className="inline-flex items-center gap-2 font-semibold text-blue-600 transition-colors hover:text-blue-700"
+            >
+              Explore our Orange County service area
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>

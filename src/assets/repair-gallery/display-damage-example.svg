@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Display damage example placeholder</title>
+  <desc id="desc">A stylized phone screen with lines and dark spots.</desc>
+  <rect width="1200" height="900" fill="#dbeafe"/>
+  <rect x="250" y="90" width="700" height="720" rx="72" fill="#0f172a"/>
+  <rect x="300" y="140" width="600" height="620" rx="48" fill="#111827"/>
+  <rect x="340" y="210" width="520" height="36" rx="18" fill="#7c3aed" opacity=".85"/>
+  <rect x="340" y="286" width="520" height="26" rx="13" fill="#0ea5e9" opacity=".75"/>
+  <rect x="340" y="344" width="520" height="48" rx="24" fill="#ef4444" opacity=".7"/>
+  <circle cx="735" cy="520" r="86" fill="#020617" opacity=".8"/>
+  <circle cx="560" cy="470" r="56" fill="#1e293b" opacity=".65"/>
+  <rect x="340" y="610" width="360" height="18" rx="9" fill="#334155"/>
+  <rect x="535" y="790" width="130" height="10" rx="5" fill="#475569"/>
+</svg>

@@ -1,43 +1,54 @@
 export const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Home', href: '/' },
+  { label: 'iPhone Screen Repair', href: '/iphone-screen-repair-irvine' },
+  { label: 'Battery Replacement', href: '/iphone-battery-replacement-irvine' },
+  { label: 'iPad Repair', href: '/ipad-repair-irvine' },
+  { label: 'Mobile Repair', href: '/mobile-phone-repair-irvine' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'FAQ', href: '/faq' },
 ];
 
 export const services = [
   {
     title: 'iPhone Screen Repair',
-    desc: 'Cracked or broken screen? We offer fast iPhone screen replacement in Irvine using high-quality parts.',
+    desc: 'For cracked glass, black display issues, or touch problems, start here for fast screen repair service in Irvine.',
+    href: '/iphone-screen-repair-irvine',
+    cta: 'View Screen Repair',
   },
   {
     title: 'Battery Replacement',
-    desc: 'Battery draining too fast? Get your phone running like new with a same-day battery replacement.',
+    desc: 'If your phone drains quickly or shuts off unexpectedly, learn more about our same-day battery replacement service.',
+    href: '/iphone-battery-replacement-irvine',
+    cta: 'View Battery Service',
   },
   {
-    title: 'Charging Port Repair',
-    desc: 'Phone not charging properly? We fix charging port issues quickly and reliably.',
+    title: 'iPad Repair',
+    desc: 'From broken screens to charging issues, we handle common iPad problems for home, school, and business devices.',
+    href: '/ipad-repair-irvine',
+    cta: 'View iPad Repair',
   },
   {
-    title: 'Diagnostic Service',
-    desc: "Not sure what's wrong? We provide fast diagnostics to identify and fix the issue.",
+    title: 'Mobile Repair Service',
+    desc: 'Need a more convenient option? Our mobile service is built for customers in Irvine who want repair help brought to them.',
+    href: '/mobile-phone-repair-irvine',
+    cta: 'View Mobile Repair',
   },
 ];
 
-export const trustPoints = ['Same-day service', 'Warranty included', 'Serving Irvine & OC'];
+export const trustPoints = ['Same-day service', 'Mobile appointments available', 'Irvine & OC coverage'];
 
 export const whyChooseUs = [
   {
-    title: 'Premium Parts',
-    desc: 'We use high-quality replacement parts for every repair.',
+    title: 'Fast Response',
+    desc: 'You can call, text, or request a quote online and hear back quickly about the next step.',
   },
   {
-    title: 'Warranty Included',
-    desc: 'All repairs come with a warranty for your peace of mind.',
+    title: 'Mobile Convenience',
+    desc: 'For many local customers, mobile repair makes it easier to get help without rearranging the whole day.',
   },
   {
-    title: 'Fast Turnaround',
-    desc: 'Most repairs are completed the same day.',
+    title: 'Local Coverage',
+    desc: 'We serve Irvine and Orange County with practical repair options for common phone and tablet issues.',
   },
 ];
 
@@ -67,14 +78,18 @@ export const review = {
 export const faqs = [
   {
     q: 'How long does phone repair take?',
-    a: 'Most repairs are completed within the same day.',
+    a: 'Many common repairs can be completed the same day, depending on the device and the issue.',
   },
   {
-    q: 'Do you offer a warranty?',
-    a: 'Yes, all repairs come with a warranty depending on the service.',
+    q: 'Do you offer mobile phone repair in Irvine?',
+    a: 'Yes. If mobile service is the best fit for your repair, we can coordinate a convenient option in Irvine.',
   },
   {
-    q: 'How much does iPhone screen repair cost?',
-    a: 'Prices vary by model. Contact us for a quick quote.',
+    q: 'How do I get a repair quote?',
+    a: 'Call, text, or use the quote form with your device issue and we will point you to the right next step.',
+  },
+  {
+    q: 'Do you work outside Irvine?',
+    a: 'Yes. We also help customers throughout Orange County, depending on the repair type and scheduling.',
   },
 ];
