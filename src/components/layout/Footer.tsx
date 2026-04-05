@@ -8,6 +8,9 @@ export function Footer() {
     '/iphone-screen-repair-irvine',
     '/iphone-battery-replacement-irvine',
     '/ipad-repair-irvine',
+    '/mobile-phone-repair-irvine',
+    '/faq',
+    '/contact',
   ].includes(location.pathname);
 
   return (

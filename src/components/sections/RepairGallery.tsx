@@ -6,20 +6,30 @@ type RepairGalleryImage = {
 
 type RepairGalleryProps = {
   images: readonly RepairGalleryImage[];
+  eyebrow?: string;
+  title?: string;
+  description?: string;
 };
 
-export function RepairGallery({ images }: RepairGalleryProps) {
+export function RepairGallery({
+  images,
+  eyebrow,
+  title = 'Repair Photo Gallery',
+  description = 'A few examples of the kinds of cracked-screen conditions and repair stages customers commonly ask us about.',
+}: RepairGalleryProps) {
   return (
     <section className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-3xl">
+          {eyebrow && (
+            <p className="mb-3 text-sm font-semibold tracking-[0.24em] text-blue-600 uppercase">
+              {eyebrow}
+            </p>
+          )}
           <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-            Repair Photo Gallery
+            {title}
           </h2>
-          <p className="text-lg leading-relaxed text-gray-600">
-            A few examples of the kinds of cracked-screen conditions and repair stages customers
-            commonly ask us about.
-          </p>
+          <p className="text-lg leading-relaxed text-gray-600">{description}</p>
         </div>
 
         <div className="-mx-4 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">

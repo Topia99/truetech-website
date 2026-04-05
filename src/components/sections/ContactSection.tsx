@@ -7,16 +7,26 @@ import { siteConfig } from '../../config/site';
 type ContactFormValues = {
   name: string;
   phoneNumber: string;
+  deviceModel: string;
   issue: string;
 };
 
 type ContactFormErrors = Partial<Record<keyof ContactFormValues, string>>;
+
+type ContactSectionProps = {
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  submitLabel?: string;
+  issuePlaceholder?: string;
+};
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/meerykdk';
 
 const initialValues: ContactFormValues = {
   name: '',
   phoneNumber: '',
+  deviceModel: '',
   issue: '',
 };
 
@@ -38,7 +48,13 @@ function validate(values: ContactFormValues): ContactFormErrors {
   return errors;
 }
 
-export function ContactSection() {
+export function ContactSection({
+  eyebrow = 'Ready to Start?',
+  title = 'Get a Free Quote',
+  description = "Tell us what is happening with your device and how to reach you. We'll help you figure out the best next step as quickly as possible.",
+  submitLabel = 'Request a Quote',
+  issuePlaceholder = 'Example: iPhone screen is cracked and the touch is not responding.',
+}: ContactSectionProps) {
   const [formValues, setFormValues] = useState<ContactFormValues>(initialValues);
   const [formErrors, setFormErrors] = useState<ContactFormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,6 +70,7 @@ export function ContactSection() {
       body: JSON.stringify({
         name: values.name,
         phone: values.phoneNumber,
+        deviceModel: values.deviceModel,
         issue: values.issue,
       }),
     });
@@ -104,13 +121,10 @@ export function ContactSection() {
           <div className="rounded-3xl bg-slate-900 p-8 text-white shadow-xl shadow-slate-900/10 sm:p-10">
             <div className="mb-8 max-w-xl">
               <p className="mb-3 text-sm font-semibold tracking-[0.24em] text-blue-300 uppercase">
-                Ready to Start?
+                {eyebrow}
               </p>
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">Get a Free Quote</h2>
-              <p className="text-lg leading-relaxed text-slate-300">
-                Tell us what is happening with your device and how to reach you. We&apos;ll help
-                you figure out the best next step as quickly as possible.
-              </p>
+              <h2 className="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
+              <p className="text-lg leading-relaxed text-slate-300">{description}</p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
@@ -192,6 +206,33 @@ export function ContactSection() {
               </div>
 
               <div>
+                <label
+                  htmlFor="contact-device-model"
+                  className="mb-2 block text-sm font-semibold text-gray-900"
+                >
+                  Device Model
+                </label>
+                <input
+                  id="contact-device-model"
+                  name="deviceModel"
+                  type="text"
+                  value={formValues.deviceModel}
+                  onChange={(event) => handleFieldChange('deviceModel', event.target.value)}
+                  aria-invalid={Boolean(formErrors.deviceModel)}
+                  aria-describedby={
+                    formErrors.deviceModel ? 'contact-device-model-error' : undefined
+                  }
+                  className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 shadow-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                  placeholder="Example: iPhone 14 Pro or iPad Air"
+                />
+                {formErrors.deviceModel && (
+                  <p id="contact-device-model-error" className="mt-2 text-sm text-red-600">
+                    {formErrors.deviceModel}
+                  </p>
+                )}
+              </div>
+
+              <div>
                 <label htmlFor="contact-issue" className="mb-2 block text-sm font-semibold text-gray-900">
                   Issue
                 </label>
@@ -204,7 +245,7 @@ export function ContactSection() {
                   aria-invalid={Boolean(formErrors.issue)}
                   aria-describedby={formErrors.issue ? 'contact-issue-error' : undefined}
                   className="min-h-36 w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-gray-900 shadow-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
-                  placeholder="Example: iPhone screen is cracked and the touch is not responding."
+                  placeholder={issuePlaceholder}
                 />
                 {formErrors.issue && (
                   <p id="contact-issue-error" className="mt-2 text-sm text-red-600">
@@ -230,7 +271,7 @@ export function ContactSection() {
                 disabled={isSubmitting}
                 className="flex w-full items-center justify-center rounded-full bg-blue-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-400"
               >
-                {isSubmitting ? 'Submitting...' : 'Request a Quote'}
+                {isSubmitting ? 'Submitting...' : submitLabel}
               </button>
             </form>
           </div>
